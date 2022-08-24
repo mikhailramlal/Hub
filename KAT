@@ -1,0 +1,57 @@
+local KAT = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+
+syn.protect_gui(KAT)
+
+KAT.Name = "KAT"
+KAT.Parent = game:GetService("CoreGui")
+KAT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+KAT.DisplayOrder = 1000 
+
+Main.Name = "Main"
+Main.Parent = KAT
+Main.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Main.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Main.Position = UDim2.new(0.121079519, 0, 0.611111164, 0)
+Main.Size = UDim2.new(0, 295, 0, 133)
+Main.Active = true 
+Main.Draggable = true 
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Title.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Title.Size = UDim2.new(0, 295, 0, 18)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Zane BBC [KAT]"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 16.000
+
+TextButton.Parent = Main
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.206779674, 0, 0.225563914, 0)
+TextButton.Size = UDim2.new(0, 172, 0, 32)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Lime X"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 16.000
+TextButton.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/mikhailramlal/Hub/main/Lime%20X"))()
+end)
+
+TextButton_2.Parent = Main
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.Position = UDim2.new(0.206779659, 0, 0.616541386, 0)
+TextButton_2.Size = UDim2.new(0, 172, 0, 32)
+TextButton_2.Font = Enum.Font.SourceSansBold
+TextButton_2.Text = "V.G Hub"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 16.000
+TextButton_2.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/mikhailramlal/Hub/main/V.G%20Hub'))()
+end)
