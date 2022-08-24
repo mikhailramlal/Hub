@@ -1,0 +1,8 @@
+if game.PlaceId == 621129760 then 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/mikhailramlal/Hub/main/KAT"))()
+else 
+    rconsoleclear()
+    rconsolename("Zane BBC")
+    rconsoleprint("Game not found.")
+end
+
