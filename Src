@@ -1,0 +1,68 @@
+local Loader = Instance.new("ScreenGui")
+local LoaderFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local KeyBox = Instance.new("TextBox")
+local LoadButton = Instance.new("TextButton")
+
+syn.protect_gui(Loader)
+
+Loader.Name = "MainGUI"
+Loader.Parent = game:GetService("CoreGui")
+Loader.DisplayOrder = 1000 
+
+LoaderFrame.Name = "LoaderFrame"
+LoaderFrame.Parent = Loader
+LoaderFrame.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LoaderFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+LoaderFrame.Position = UDim2.new(0.484318018, 0, 0.474603176, 0)
+LoaderFrame.Size = UDim2.new(0, 281, 0, 143)
+LoaderFrame.Active = true 
+LoaderFrame.Draggable = true 
+
+Title.Name = "Title"
+Title.Parent = LoaderFrame
+Title.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Title.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Title.Size = UDim2.new(0, 281, 0, 18)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Zane BBC [LOADER]"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 16.000
+
+KeyBox.Name = "KeyBox"
+KeyBox.Parent = LoaderFrame
+KeyBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KeyBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.Position = UDim2.new(0.142348751, 0, 0.25874126, 0)
+KeyBox.Size = UDim2.new(0, 200, 0, 30)
+KeyBox.Font = Enum.Font.SourceSansBold
+KeyBox.PlaceholderColor3 = Color3.fromRGB(179, 179, 179)
+KeyBox.PlaceholderText = "Key..."
+KeyBox.Text = ""
+KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.TextSize = 16.000
+
+LoadButton.Name = "LoadButton"
+LoadButton.Parent = LoaderFrame
+LoadButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LoadButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+LoadButton.Position = UDim2.new(0.142348751, 0, 0.608391643, 0)
+LoadButton.Size = UDim2.new(0, 200, 0, 30)
+LoadButton.Font = Enum.Font.SourceSansBold
+LoadButton.Text = "Load"
+LoadButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadButton.TextSize = 18.000
+LoadButton.MouseButton1Down:Connect(function()
+    if KeyBox.Text == "TD7:U')^Z#*CV`-!_FxP" then 
+        rconsoleclear()
+        rconsolename("Zane BBC")
+        rconsoleprint("Correct Key!")
+        LoaderFrame.Active = false 
+        LoaderFrame.Visible = false 
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/mikhailramlal/Hub/main/Checker"))()
+    else 
+        rconsoleclear()
+        rconsolename("Zane BBC")
+        rconsoleprint("Wrong Key!")
+    end
+end)
